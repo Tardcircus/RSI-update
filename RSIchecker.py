@@ -23,14 +23,13 @@ prev_content = " "
 
 while True:
     try:
-        # Fetch the website content
+
         response = requests.get(url)
         content = response.text
     except requests.exceptions.RequestException as e:
         print(e)
         continue
 
-    # Compare the content with the previous content
     if content != prev_content:
 
         message = """\
@@ -59,14 +58,11 @@ while True:
 prev_content2 = " "
 
     try:
-        # Fetch the website content
         response = requests.get(url2)
         content = response.text
     except requests.exceptions.RequestException as e:
         print(e)
         continue
-
-    # Compare the content with the previous content
     if content2 != prev_content2:
         message2 = """\
         From: Star.Citizen.Update@NotRSI.com
@@ -86,6 +82,5 @@ prev_content2 = " "
     # Update the previous content
     prev_content2 = content2
 
-    # Wait for 60 seconds before checking again
     time.sleep(60)
     print("Rechecking")
