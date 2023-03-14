@@ -4,7 +4,7 @@ import smtplib, ssl
 
 
 #
-#  Replace inside od Quotes. dont add quotes to port number
+#  Replace inside of quotes. dont add quotes to port number
 #
 
 Server_host = "YOUR EMAIL PROVIDER HOST"
